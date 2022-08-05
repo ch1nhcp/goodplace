@@ -28,7 +28,7 @@ function Navbar() {
               className={
                 pathMathRoute("/")
                   ? "navbarListItemNameActive"
-                  : "navbarListItemNam"
+                  : "navbarListItemName"
               }
             >
               Explore
@@ -45,7 +45,7 @@ function Navbar() {
               className={
                 pathMathRoute("/offers")
                   ? "navbarListItemNameActive"
-                  : "navbarListItemNam"
+                  : "navbarListItemName"
               }
             >
               Offer
@@ -62,7 +62,7 @@ function Navbar() {
               className={
                 pathMathRoute("/profile")
                   ? "navbarListItemNameActive"
-                  : "navbarListItemNam"
+                  : "navbarListItemName"
               }
             >
               Profile
