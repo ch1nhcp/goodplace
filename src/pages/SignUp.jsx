@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import {
   getAuth,
@@ -44,9 +45,10 @@ function SignUp() {
       updateProfile(auth.currentUser, {
         displayName: name,
       });
-      
+
       navigate("/");
     } catch (error) {
+      toast.error("Something went wrong with registration!");
       console.log(error);
     }
   };
