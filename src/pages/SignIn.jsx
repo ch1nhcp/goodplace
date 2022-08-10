@@ -51,53 +51,53 @@ function SignIn() {
         <header>
           <p className="pageHeader">Welcome Back!</p>
         </header>
-      </div>
 
-      <form onSubmit={onSubmit}>
-        <input
-          type="email"
-          className="emailInput"
-          placeholder="Email address"
-          id="email"
-          value={email}
-          onChange={onChange}
-        />
-
-        <div className="passwordInputDiv">
+        <form onSubmit={onSubmit}>
           <input
-            type={showPassword ? "text" : "password"}
-            className="passwordInput"
-            placeholder="Password"
-            id="password"
-            value={password}
+            type="email"
+            className="emailInput"
+            placeholder="Email address"
+            id="email"
+            value={email}
             onChange={onChange}
           />
 
-          <img
-            src={visibilityIcon}
-            alt="show password"
-            className="showPassword"
-            onClick={() => setShowPassword((prevState) => !prevState)}
-          />
-        </div>
+          <div className="passwordInputDiv">
+            <input
+              type={showPassword ? "text" : "password"}
+              className="passwordInput"
+              placeholder="Password"
+              id="password"
+              value={password}
+              onChange={onChange}
+            />
 
-        <Link to="/forgot-password" className="forgotPasswordLink">
-          Forgot Password
+            <img
+              src={visibilityIcon}
+              alt="show password"
+              className="showPassword"
+              onClick={() => setShowPassword((prevState) => !prevState)}
+            />
+          </div>
+
+          <Link to="/forgot-password" className="forgotPasswordLink">
+            Forgot Password
+          </Link>
+
+          <div className="signInBar">
+            <p className="signInText">Sign In</p>
+            <button className="signInButton">
+              <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
+            </button>
+          </div>
+        </form>
+
+        {/* Google OAuth */}
+
+        <Link to="/sign-up" className="registerLink">
+          Sign Up Instead
         </Link>
-
-        <div className="signInBar">
-          <p className="signInText">Sign In</p>
-          <button className="signInButton">
-            <ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
-          </button>
-        </div>
-      </form>
-
-      {/* Google OAuth */}
-
-      <Link to="/sign-up" className="registerLink">
-        Sign Up Instead
-      </Link>
+      </div>
     </>
   );
 }
